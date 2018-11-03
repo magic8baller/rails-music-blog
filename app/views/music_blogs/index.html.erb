@@ -1,0 +1,6 @@
+
+<h1>CHECK ME OUT</h1>
+
+<% @music_blogs.each do |mb| %>
+<li><%= link_to mb.title, music_blog_path(mb.id) %></li>
+<% end %>

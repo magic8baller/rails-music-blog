@@ -1,0 +1,2 @@
+module MusicBlogsHelper
+end

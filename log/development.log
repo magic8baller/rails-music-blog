@@ -1,0 +1,782 @@
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateMusicBlogs (20181103173155)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "music_blogs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "content" varchar, "rating" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181103173155_create_music_blogs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181103173155"]]
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-11-03 17:33:20.409559"], ["updated_at", "2018-11-03 17:33:20.409559"]]
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mMusicBlog Create (1.3ms)[0m  [1m[32mINSERT INTO "music_blogs" ("title", "content", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "PHAT 90s Throwbacks"], ["content", "Some dope 90s hiphop & r&b flava in your ears"], ["rating", 1995], ["created_at", "2018-11-03 17:47:53.438269"], ["updated_at", "2018-11-03 17:47:53.438269"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mMusicBlog Load (0.5ms)[0m  [1m[34mSELECT  "music_blogs".* FROM "music_blogs" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (1.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMusicBlog Create (2.4ms)[0m  [1m[32mINSERT INTO "music_blogs" ("title", "content", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "80s RoLLer DisCo"], ["content", "Shiny Disco Ballz & BIG HAIR!\n"], ["rating", 300], ["created_at", "2018-11-03 18:30:41.747860"], ["updated_at", "2018-11-03 18:30:41.747860"]]
+  [1m[35m (9.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMusicBlog Load (0.2ms)[0m  [1m[34mSELECT  "music_blogs".* FROM "music_blogs" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2018-11-03 14:35:51 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leslie/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/leslie/.rvm/gems/ruby-2.3.3/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/leslie/.rvm/gems/ruby-2.3.3/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (6.7ms)
+Completed 200 OK in 32ms (Views: 18.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/music_blogs" for 127.0.0.1 at 2018-11-03 14:36:06 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/music_blogs"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/music_blogs/new" for 127.0.0.1 at 2018-11-03 14:36:16 -0400
+Processing by MusicBlogsController#new as HTML
+  Rendering music_blogs/new.html.erb within layouts/application
+  Rendered music_blogs/new.html.erb within layouts/application (133.5ms)
+Completed 500 Internal Server Error in 168ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `music_blogs_path' for #<#<Class:0x007fa89a31c2a8>:0x007fa89724e950>
+Did you mean?  music_blogs_new_path):
+    3: <h1>MusicBlogs#new</h1>
+    4: <p>Find me in app/views/music_blogs/new.html.erb</p>
+    5: 
+    6: <%= form_for @music_blog do |f| %>
+    7:   <%= label_tag(:title, 'Title') %>
+    8:   <%= f.text_field :title %> <br>
+    9: 
+  
+app/views/music_blogs/new.html.erb:6:in `_app_views_music_blogs_new_html_erb___1186120517295702717_70181059094000'
+Started POST "/__web_console/repl_sessions/9332ab850ff14bc83412cad3fbbdecdf/trace" for 127.0.0.1 at 2018-11-03 14:36:43 -0400
+Started GET "/music_blogs/new" for 127.0.0.1 at 2018-11-03 14:51:48 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leslie/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by MusicBlogsController#new as HTML
+  Rendering music_blogs/new.html.erb within layouts/application
+  Rendered music_blogs/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 514ms (Views: 489.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/music_blogs/" for 127.0.0.1 at 2018-11-03 14:51:55 -0400
+Processing by MusicBlogsController#index as HTML
+  Rendering music_blogs/index.html.erb within layouts/application
+  [1m[36mMusicBlog Load (1.2ms)[0m  [1m[34mSELECT "music_blogs".* FROM "music_blogs"[0m
+  ↳ app/views/music_blogs/index.html.erb:4
+  Rendered music_blogs/index.html.erb within layouts/application (267.7ms)
+Completed 500 Internal Server Error in 282ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `music_blog' for #<#<Class:0x007ffb76fa92a8>:0x007ffb75603b00>
+Did you mean?  @music_blogs):
+    2: <h1>CHECK ME OUT</h1>
+    3: 
+    4: <% @music_blogs.each do |mb| %>
+    5: <li><%= link_to music_blog.title, music_blog_path(music_blog.id) %></li>
+    6: <% end %>
+  
+app/views/music_blogs/index.html.erb:5:in `block in _app_views_music_blogs_index_html_erb___2149607396047107220_70359039803860'
+app/views/music_blogs/index.html.erb:4:in `_app_views_music_blogs_index_html_erb___2149607396047107220_70359039803860'
+Started GET "/music_blogs/" for 127.0.0.1 at 2018-11-03 14:52:54 -0400
+Processing by MusicBlogsController#index as HTML
+  Rendering music_blogs/index.html.erb within layouts/application
+  [1m[36mMusicBlog Load (0.8ms)[0m  [1m[34mSELECT "music_blogs".* FROM "music_blogs"[0m
+  ↳ app/views/music_blogs/index.html.erb:4
+  Rendered music_blogs/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 37ms (Views: 33.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/music_blogs/1" for 127.0.0.1 at 2018-11-03 14:52:58 -0400
+Processing by MusicBlogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicBlog Load (0.5ms)[0m  [1m[34mSELECT  "music_blogs".* FROM "music_blogs" WHERE "music_blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_blogs_controller.rb:14
+  Rendering music_blogs/show.html.erb within layouts/application
+  Rendered music_blogs/show.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 155ms (ActiveRecord: 0.5ms)
+
+
+  
+SyntaxError (/Users/leslie/Desktop/nov_3_proj/muzak_blog/app/views/music_blogs/show.html.erb:9: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...urn HOME <3", music_blogs_path" );
+...                               ^
+/Users/leslie/Desktop/nov_3_proj/muzak_blog/app/views/music_blogs/show.html.erb:9: unterminated string meets end of file):
+  
+app/views/music_blogs/show.html.erb:9: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+app/views/music_blogs/show.html.erb:9: unterminated string meets end of file
+Started GET "/music_blogs/1" for 127.0.0.1 at 2018-11-03 14:53:38 -0400
+Processing by MusicBlogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicBlog Load (0.1ms)[0m  [1m[34mSELECT  "music_blogs".* FROM "music_blogs" WHERE "music_blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_blogs_controller.rb:14
+  Rendering music_blogs/show.html.erb within layouts/application
+  Rendered music_blogs/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/Users/leslie/Desktop/nov_3_proj/muzak_blog/app/views/music_blogs/show.html.erb:9: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...turn HOME <3", music_blog_path" );
+...                               ^
+/Users/leslie/Desktop/nov_3_proj/muzak_blog/app/views/music_blogs/show.html.erb:9: unterminated string meets end of file):
+  
+app/views/music_blogs/show.html.erb:9: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+app/views/music_blogs/show.html.erb:9: unterminated string meets end of file
+Started GET "/music_blogs/1" for 127.0.0.1 at 2018-11-03 14:55:34 -0400
+Processing by MusicBlogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicBlog Load (0.2ms)[0m  [1m[34mSELECT  "music_blogs".* FROM "music_blogs" WHERE "music_blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_blogs_controller.rb:14
+  Rendering music_blogs/show.html.erb within layouts/application
+  Rendered music_blogs/show.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/Users/leslie/Desktop/nov_3_proj/muzak_blog/app/views/music_blogs/show.html.erb:9: syntax error, unexpected tSTRING_BEG, expecting ')'
+..., music_blog_path(@music_blog)" );
+...                               ^
+/Users/leslie/Desktop/nov_3_proj/muzak_blog/app/views/music_blogs/show.html.erb:9: unterminated string meets end of file):
+  
+app/views/music_blogs/show.html.erb:9: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/music_blogs/show.html.erb:9: unterminated string meets end of file
+Started GET "/music_blogs/1" for 127.0.0.1 at 2018-11-03 14:56:18 -0400
+Processing by MusicBlogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicBlog Load (0.1ms)[0m  [1m[34mSELECT  "music_blogs".* FROM "music_blogs" WHERE "music_blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_blogs_controller.rb:14
+  Rendering music_blogs/show.html.erb within layouts/application
+  Rendered music_blogs/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 49ms (Views: 45.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music_blogs" for 127.0.0.1 at 2018-11-03 14:56:22 -0400
+Processing by MusicBlogsController#index as HTML
+  Rendering music_blogs/index.html.erb within layouts/application
+  [1m[36mMusicBlog Load (0.4ms)[0m  [1m[34mSELECT "music_blogs".* FROM "music_blogs"[0m
+  ↳ app/views/music_blogs/index.html.erb:4
+  Rendered music_blogs/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 125ms (Views: 115.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/music_blogs/2" for 127.0.0.1 at 2018-11-03 14:56:24 -0400
+Processing by MusicBlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMusicBlog Load (0.2ms)[0m  [1m[34mSELECT  "music_blogs".* FROM "music_blogs" WHERE "music_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_blogs_controller.rb:14
+  Rendering music_blogs/show.html.erb within layouts/application
+  Rendered music_blogs/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 57ms (Views: 51.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music_blogs" for 127.0.0.1 at 2018-11-03 14:56:25 -0400
+Processing by MusicBlogsController#index as HTML
+  Rendering music_blogs/index.html.erb within layouts/application
+  [1m[36mMusicBlog Load (0.2ms)[0m  [1m[34mSELECT "music_blogs".* FROM "music_blogs"[0m
+  ↳ app/views/music_blogs/index.html.erb:4
+  Rendered music_blogs/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 55ms (Views: 50.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music_blogs/edit" for 127.0.0.1 at 2018-11-03 14:56:30 -0400
+Processing by MusicBlogsController#show as HTML
+  Parameters: {"id"=>"edit"}
+  [1m[36mMusicBlog Load (0.1ms)[0m  [1m[34mSELECT  "music_blogs".* FROM "music_blogs" WHERE "music_blogs"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/music_blogs_controller.rb:14
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find MusicBlog with 'id'=edit):
+  
+app/controllers/music_blogs_controller.rb:14:in `show'
+Started GET "/music_blogs/edit" for 127.0.0.1 at 2018-11-03 14:59:49 -0400
+Processing by MusicBlogsController#show as HTML
+  Parameters: {"id"=>"edit"}
+  [1m[36mMusicBlog Load (0.1ms)[0m  [1m[34mSELECT  "music_blogs".* FROM "music_blogs" WHERE "music_blogs"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/music_blogs_controller.rb:14
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find MusicBlog with 'id'=edit):
+  
+app/controllers/music_blogs_controller.rb:14:in `show'
+Started GET "/music_blogs/edit" for 127.0.0.1 at 2018-11-03 15:10:23 -0400
+Processing by MusicBlogsController#show as HTML
+  Parameters: {"id"=>"edit"}
+  [1m[36mMusicBlog Load (1.1ms)[0m  [1m[34mSELECT  "music_blogs".* FROM "music_blogs" WHERE "music_blogs"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/music_blogs_controller.rb:14
+Completed 404 Not Found in 17ms (ActiveRecord: 2.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find MusicBlog with 'id'=edit):
+  
+app/controllers/music_blogs_controller.rb:14:in `show'
+Started GET "/music_blogs/edit" for 127.0.0.1 at 2018-11-03 15:15:46 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leslie/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by MusicBlogsController#show as HTML
+  Parameters: {"id"=>"edit"}
+  [1m[36mMusicBlog Load (0.4ms)[0m  [1m[34mSELECT  "music_blogs".* FROM "music_blogs" WHERE "music_blogs"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/music_blogs_controller.rb:14
+Completed 404 Not Found in 19ms (ActiveRecord: 1.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find MusicBlog with 'id'=edit):
+  
+app/controllers/music_blogs_controller.rb:14:in `show'
+Started GET "/music_blogs/1/edit" for 127.0.0.1 at 2018-11-03 15:18:10 -0400
+Processing by MusicBlogsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicBlog Load (0.4ms)[0m  [1m[34mSELECT  "music_blogs".* FROM "music_blogs" WHERE "music_blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_blogs_controller.rb:18
+  Rendering music_blogs/edit.html.erb within layouts/application
+  Rendered music_blogs/edit.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 275ms (Views: 246.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/music_blogs/new" for 127.0.0.1 at 2018-11-03 15:18:19 -0400
+Processing by MusicBlogsController#new as HTML
+  Rendering music_blogs/new.html.erb within layouts/application
+  Rendered music_blogs/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 34ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/music_blogs/show" for 127.0.0.1 at 2018-11-03 15:18:23 -0400
+Processing by MusicBlogsController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mMusicBlog Load (0.4ms)[0m  [1m[34mSELECT  "music_blogs".* FROM "music_blogs" WHERE "music_blogs"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/music_blogs_controller.rb:14
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find MusicBlog with 'id'=show):
+  
+app/controllers/music_blogs_controller.rb:14:in `show'
+Started GET "/music_blogs/1" for 127.0.0.1 at 2018-11-03 15:19:03 -0400
+Processing by MusicBlogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicBlog Load (0.2ms)[0m  [1m[34mSELECT  "music_blogs".* FROM "music_blogs" WHERE "music_blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_blogs_controller.rb:14
+  Rendering music_blogs/show.html.erb within layouts/application
+  Rendered music_blogs/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 70ms (Views: 65.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music_blogs" for 127.0.0.1 at 2018-11-03 15:19:09 -0400
+Processing by MusicBlogsController#index as HTML
+  Rendering music_blogs/index.html.erb within layouts/application
+  [1m[36mMusicBlog Load (0.5ms)[0m  [1m[34mSELECT "music_blogs".* FROM "music_blogs"[0m
+  ↳ app/views/music_blogs/index.html.erb:4
+  Rendered music_blogs/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 76ms (Views: 69.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/music_blogs/1" for 127.0.0.1 at 2018-11-03 15:19:11 -0400
+Processing by MusicBlogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicBlog Load (0.5ms)[0m  [1m[34mSELECT  "music_blogs".* FROM "music_blogs" WHERE "music_blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_blogs_controller.rb:14
+  Rendering music_blogs/show.html.erb within layouts/application
+  Rendered music_blogs/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 164ms (Views: 158.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/music_blogs/2" for 127.0.0.1 at 2018-11-03 15:19:17 -0400
+Processing by MusicBlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMusicBlog Load (0.2ms)[0m  [1m[34mSELECT  "music_blogs".* FROM "music_blogs" WHERE "music_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_blogs_controller.rb:14
+  Rendering music_blogs/show.html.erb within layouts/application
+  Rendered music_blogs/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 58ms (Views: 50.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music_blogs/1" for 127.0.0.1 at 2018-11-03 15:19:22 -0400
+Processing by MusicBlogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicBlog Load (0.3ms)[0m  [1m[34mSELECT  "music_blogs".* FROM "music_blogs" WHERE "music_blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_blogs_controller.rb:14
+  Rendering music_blogs/show.html.erb within layouts/application
+  Rendered music_blogs/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 186ms (Views: 171.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music_blogs/1" for 127.0.0.1 at 2018-11-03 15:28:25 -0400
+Processing by MusicBlogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicBlog Load (2.4ms)[0m  [1m[34mSELECT  "music_blogs".* FROM "music_blogs" WHERE "music_blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_blogs_controller.rb:14
+  Rendering music_blogs/show.html.erb within layouts/application
+  Rendered music_blogs/show.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 339ms (Views: 229.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/music_blogs/1/EDIT" for 127.0.0.1 at 2018-11-03 15:29:40 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/music_blogs/1/EDIT"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/music_blogs/1/EDIT" for 127.0.0.1 at 2018-11-03 15:29:46 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/music_blogs/1/EDIT"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/music_blogs/edit/1" for 127.0.0.1 at 2018-11-03 15:29:59 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/music_blogs/edit/1"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/music_blogs/1/edit/" for 127.0.0.1 at 2018-11-03 15:30:04 -0400
+Processing by MusicBlogsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicBlog Load (0.4ms)[0m  [1m[34mSELECT  "music_blogs".* FROM "music_blogs" WHERE "music_blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_blogs_controller.rb:18
+  Rendering music_blogs/edit.html.erb within layouts/application
+  Rendered music_blogs/edit.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 48ms (Views: 42.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/music_blogs/1/edit/" for 127.0.0.1 at 2018-11-03 15:30:33 -0400
+Processing by MusicBlogsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicBlog Load (0.2ms)[0m  [1m[34mSELECT  "music_blogs".* FROM "music_blogs" WHERE "music_blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_blogs_controller.rb:18
+  Rendering music_blogs/edit.html.erb within layouts/application
+  Rendered music_blogs/edit.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 66ms (Views: 61.0ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/music_blogs/1" for 127.0.0.1 at 2018-11-03 15:35:43 -0400
+Processing by MusicBlogsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GFoynLTkphFa+8T1hkd7YQEVWcSrSqF2qpKMQyJ+Ok64Awks+UP7xJwuVUKzS17SjXJNhaonAsVg4LoFDC7XKA==", "music_blog"=>{"title"=>"PHAT 90s Throwbacks", "content"=>"grab your bubble north face goose, jordans, air max 95s, and pagers -- about to take you back, back, waaay back to the hip-hop era of beefs, gangsta rap, and reminds you of how damn ancient you are", "rating"=>"1995"}, "commit"=>"Update", "id"=>"1"}
+  [1m[36mMusicBlog Load (1.3ms)[0m  [1m[34mSELECT  "music_blogs".* FROM "music_blogs" WHERE "music_blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_blogs_controller.rb:27
+  [1m[35m (4.8ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/music_blogs_controller.rb:28
+  [1m[36mMusicBlog Update (1.7ms)[0m  [1m[33mUPDATE "music_blogs" SET "content" = ?, "updated_at" = ? WHERE "music_blogs"."id" = ?[0m  [["content", "grab your bubble north face goose, jordans, air max 95s, and pagers -- about to take you back, back, waaay back to the hip-hop era of beefs, gangsta rap, and reminds you of how damn ancient you are"], ["updated_at", "2018-11-03 19:35:43.410029"], ["id", 1]]
+  ↳ app/controllers/music_blogs_controller.rb:28
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/music_blogs_controller.rb:28
+Redirected to http://localhost:3000/music_blogs/1/edit
+Completed 302 Found in 119ms (ActiveRecord: 10.5ms)
+
+
+Started GET "/music_blogs/1/edit" for 127.0.0.1 at 2018-11-03 15:35:43 -0400
+Processing by MusicBlogsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicBlog Load (0.3ms)[0m  [1m[34mSELECT  "music_blogs".* FROM "music_blogs" WHERE "music_blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_blogs_controller.rb:18
+  Rendering music_blogs/edit.html.erb within layouts/application
+  Rendered music_blogs/edit.html.erb within layouts/application (24.7ms)
+Completed 200 OK in 143ms (Views: 129.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music_blogs/1/edit" for 127.0.0.1 at 2018-11-03 15:36:18 -0400
+Processing by MusicBlogsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicBlog Load (0.6ms)[0m  [1m[34mSELECT  "music_blogs".* FROM "music_blogs" WHERE "music_blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_blogs_controller.rb:18
+Redirected to http://localhost:3000/music_blogs
+Completed 302 Found in 32ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/music_blogs" for 127.0.0.1 at 2018-11-03 15:36:18 -0400
+Processing by MusicBlogsController#index as HTML
+  Rendering music_blogs/index.html.erb within layouts/application
+  [1m[36mMusicBlog Load (0.2ms)[0m  [1m[34mSELECT "music_blogs".* FROM "music_blogs"[0m
+  ↳ app/views/music_blogs/index.html.erb:4
+  Rendered music_blogs/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 55ms (Views: 51.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music_blogs/1" for 127.0.0.1 at 2018-11-03 15:36:19 -0400
+Processing by MusicBlogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicBlog Load (0.2ms)[0m  [1m[34mSELECT  "music_blogs".* FROM "music_blogs" WHERE "music_blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_blogs_controller.rb:14
+  Rendering music_blogs/show.html.erb within layouts/application
+  Rendered music_blogs/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 165ms (Views: 152.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music_blogs/1" for 127.0.0.1 at 2018-11-03 15:36:36 -0400
+Processing by MusicBlogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicBlog Load (0.3ms)[0m  [1m[34mSELECT  "music_blogs".* FROM "music_blogs" WHERE "music_blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_blogs_controller.rb:14
+  Rendering music_blogs/show.html.erb within layouts/application
+  Rendered music_blogs/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 181ms (Views: 170.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music_blogs" for 127.0.0.1 at 2018-11-03 15:36:41 -0400
+Processing by MusicBlogsController#index as HTML
+  Rendering music_blogs/index.html.erb within layouts/application
+  [1m[36mMusicBlog Load (6.4ms)[0m  [1m[34mSELECT "music_blogs".* FROM "music_blogs"[0m
+  ↳ app/views/music_blogs/index.html.erb:4
+  Rendered music_blogs/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 190ms (Views: 174.4ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/music_blogs/2" for 127.0.0.1 at 2018-11-03 15:36:44 -0400
+Processing by MusicBlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMusicBlog Load (0.1ms)[0m  [1m[34mSELECT  "music_blogs".* FROM "music_blogs" WHERE "music_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_blogs_controller.rb:14
+  Rendering music_blogs/show.html.erb within layouts/application
+  Rendered music_blogs/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 100ms (Views: 94.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music_blogs/2" for 127.0.0.1 at 2018-11-03 15:39:04 -0400
+Processing by MusicBlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMusicBlog Load (0.3ms)[0m  [1m[34mSELECT  "music_blogs".* FROM "music_blogs" WHERE "music_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_blogs_controller.rb:14
+  Rendering music_blogs/show.html.erb within layouts/application
+  Rendered music_blogs/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 49ms (Views: 43.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/music_blogs" for 127.0.0.1 at 2018-11-03 15:39:07 -0400
+Processing by MusicBlogsController#index as HTML
+  Rendering music_blogs/index.html.erb within layouts/application
+  [1m[36mMusicBlog Load (0.5ms)[0m  [1m[34mSELECT "music_blogs".* FROM "music_blogs"[0m
+  ↳ app/views/music_blogs/index.html.erb:4
+  Rendered music_blogs/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 113ms (Views: 105.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/music_blogs/2" for 127.0.0.1 at 2018-11-03 15:39:09 -0400
+Processing by MusicBlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMusicBlog Load (0.2ms)[0m  [1m[34mSELECT  "music_blogs".* FROM "music_blogs" WHERE "music_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_blogs_controller.rb:14
+  Rendering music_blogs/show.html.erb within layouts/application
+  Rendered music_blogs/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 92ms (Views: 76.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music_blogs/2" for 127.0.0.1 at 2018-11-03 15:41:20 -0400
+Processing by MusicBlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMusicBlog Load (0.2ms)[0m  [1m[34mSELECT  "music_blogs".* FROM "music_blogs" WHERE "music_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_blogs_controller.rb:14
+  Rendering music_blogs/show.html.erb within layouts/application
+  Rendered music_blogs/show.html.erb within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     7: <p>RATING?? <%= @music_blog.rating %></p>
+     8: 
+     9: <h2>CHECK IT--</h2>
+    10: <% @music_blogs.each do |mb| %>
+    11: <li><%= link_to mb.title, music_blog_path(mb.id) %></li>
+    12: 
+    13: <iframe src="https://open.spotify.com/embed/user/littlelt/playlist/5Lpj6sl44YZngR5TWeaJ2O" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+  
+app/views/music_blogs/show.html.erb:10:in `_app_views_music_blogs_show_html_erb___3017087553433366060_70146177534400'
+Started GET "/music_blogs/2" for 127.0.0.1 at 2018-11-03 15:41:38 -0400
+Processing by MusicBlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMusicBlog Load (0.1ms)[0m  [1m[34mSELECT  "music_blogs".* FROM "music_blogs" WHERE "music_blogs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/music_blogs_controller.rb:14
+  Rendering music_blogs/show.html.erb within layouts/application
+  Rendered music_blogs/show.html.erb within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     7: <p>RATING?? <%= @music_blog.rating %></p>
+     8: 
+     9: <h2>CHECK IT--</h2>
+    10: <% @music_blogs.each do |mb| %>
+    11: <li><%= link_to mb.title, music_blog_path(mb.id) %></li>
+    12: 
+    13: <iframe src="https://open.spotify.com/embed/user/littlelt/playlist/5Lpj6sl44YZngR5TWeaJ2O" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+  
+app/views/music_blogs/show.html.erb:10:in `_app_views_music_blogs_show_html_erb___3017087553433366060_70146222508040'
+Started GET "/music_blogs/1" for 127.0.0.1 at 2018-11-03 15:41:50 -0400
+Processing by MusicBlogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicBlog Load (0.2ms)[0m  [1m[34mSELECT  "music_blogs".* FROM "music_blogs" WHERE "music_blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_blogs_controller.rb:14
+  Rendering music_blogs/show.html.erb within layouts/application
+  Rendered music_blogs/show.html.erb within layouts/application (3.6ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     7: <p>RATING?? <%= @music_blog.rating %></p>
+     8: 
+     9: <h2>CHECK IT--</h2>
+    10: <% @music_blogs.each do |mb| %>
+    11: <li><%= link_to mb.title, music_blog_path(mb.id) %></li>
+    12: 
+    13: <iframe src="https://open.spotify.com/embed/user/littlelt/playlist/5Lpj6sl44YZngR5TWeaJ2O" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+  
+app/views/music_blogs/show.html.erb:10:in `_app_views_music_blogs_show_html_erb___3017087553433366060_70146189156900'
+Started GET "/music_blogs" for 127.0.0.1 at 2018-11-03 15:42:02 -0400
+Processing by MusicBlogsController#index as HTML
+  Rendering music_blogs/index.html.erb within layouts/application
+  [1m[36mMusicBlog Load (0.2ms)[0m  [1m[34mSELECT "music_blogs".* FROM "music_blogs"[0m
+  ↳ app/views/music_blogs/index.html.erb:4
+  Rendered music_blogs/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 46ms (Views: 41.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/music_blogs/1" for 127.0.0.1 at 2018-11-03 15:42:04 -0400
+Processing by MusicBlogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicBlog Load (0.2ms)[0m  [1m[34mSELECT  "music_blogs".* FROM "music_blogs" WHERE "music_blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_blogs_controller.rb:14
+  Rendering music_blogs/show.html.erb within layouts/application
+  Rendered music_blogs/show.html.erb within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     7: <p>RATING?? <%= @music_blog.rating %></p>
+     8: 
+     9: <h2>CHECK IT--</h2>
+    10: <% @music_blogs.each do |mb| %>
+    11: <li><%= music_blog_path(mb.id) %></li>
+    12: 
+    13: <iframe src="https://open.spotify.com/embed/user/littlelt/playlist/5Lpj6sl44YZngR5TWeaJ2O" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+  
+app/views/music_blogs/show.html.erb:10:in `_app_views_music_blogs_show_html_erb___3017087553433366060_70146224818800'
+Started GET "/music_blogs/1" for 127.0.0.1 at 2018-11-03 15:43:42 -0400
+Processing by MusicBlogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicBlog Load (0.1ms)[0m  [1m[34mSELECT  "music_blogs".* FROM "music_blogs" WHERE "music_blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_blogs_controller.rb:14
+  Rendering music_blogs/show.html.erb within layouts/application
+  Rendered music_blogs/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/Users/leslie/Desktop/nov_3_proj/muzak_blog/app/views/music_blogs/show.html.erb:12: syntax error, unexpected ')', expecting keyword_end
+...ffer.append=( @music_blog.id) );@output_buffer.safe_append='
+...                               ^):
+  
+app/views/music_blogs/show.html.erb:12: syntax error, unexpected ')', expecting keyword_end
+Started GET "/music_blogs/1" for 127.0.0.1 at 2018-11-03 15:44:19 -0400
+Processing by MusicBlogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicBlog Load (0.1ms)[0m  [1m[34mSELECT  "music_blogs".* FROM "music_blogs" WHERE "music_blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_blogs_controller.rb:14
+  Rendering music_blogs/show.html.erb within layouts/application
+  Rendered music_blogs/show.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/Users/leslie/Desktop/nov_3_proj/muzak_blog/app/views/music_blogs/show.html.erb:12: syntax error, unexpected ')', expecting keyword_end
+...uffer.append=( music_blog.id) );@output_buffer.safe_append='
+...                               ^):
+  
+app/views/music_blogs/show.html.erb:12: syntax error, unexpected ')', expecting keyword_end
+Started GET "/music_blogs/1" for 127.0.0.1 at 2018-11-03 15:44:42 -0400
+Processing by MusicBlogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicBlog Load (0.2ms)[0m  [1m[34mSELECT  "music_blogs".* FROM "music_blogs" WHERE "music_blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_blogs_controller.rb:14
+  Rendering music_blogs/show.html.erb within layouts/application
+  Rendered music_blogs/show.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/Users/leslie/Desktop/nov_3_proj/muzak_blog/app/views/music_blogs/show.html.erb:12: syntax error, unexpected '(', expecting ')'
+...ut_buffer.append=( @music_blog(id)) );@output_buffer.safe_ap...
+...                               ^):
+  
+app/views/music_blogs/show.html.erb:12: syntax error, unexpected '(', expecting ')'
+Started GET "/music_blogs/1" for 127.0.0.1 at 2018-11-03 15:44:49 -0400
+Processing by MusicBlogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicBlog Load (0.2ms)[0m  [1m[34mSELECT  "music_blogs".* FROM "music_blogs" WHERE "music_blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_blogs_controller.rb:14
+  Rendering music_blogs/show.html.erb within layouts/application
+  Rendered music_blogs/show.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/Users/leslie/Desktop/nov_3_proj/muzak_blog/app/views/music_blogs/show.html.erb:12: syntax error, unexpected '(', expecting ')'
+...ut_buffer.append=( @music_blog(:id)) );@output_buffer.safe_a...
+...                               ^
+/Users/leslie/Desktop/nov_3_proj/muzak_blog/app/views/music_blogs/show.html.erb:12: syntax error, unexpected ')', expecting keyword_end
+...ffer.append=( @music_blog(:id)) );@output_buffer.safe_append...
+...                               ^):
+  
+app/views/music_blogs/show.html.erb:12: syntax error, unexpected '(', expecting ')'
+app/views/music_blogs/show.html.erb:12: syntax error, unexpected ')', expecting keyword_end
+Started GET "/music_blogs/1" for 127.0.0.1 at 2018-11-03 15:45:21 -0400
+Processing by MusicBlogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusicBlog Load (0.1ms)[0m  [1m[34mSELECT  "music_blogs".* FROM "music_blogs" WHERE "music_blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/music_blogs_controller.rb:14
+  Rendering music_blogs/show.html.erb within layouts/application
+  Rendered music_blogs/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 45ms (Views: 42.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/music_blogs" for 127.0.0.1 at 2018-11-03 15:45:27 -0400
+Processing by MusicBlogsController#index as HTML
+  Rendering music_blogs/index.html.erb within layouts/application
+  [1m[36mMusicBlog Load (0.2ms)[0m  [1m[34mSELECT "music_blogs".* FROM "music_blogs"[0m
+  ↳ app/views/music_blogs/index.html.erb:4
+  Rendered music_blogs/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 83ms (Views: 77.6ms | ActiveRecord: 0.2ms)
+
+

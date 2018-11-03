@@ -1,0 +1,14 @@
+<h1>MusicBlog: </h1>
+<h1> | <strong><%= @music_blog.title %></strong> | </h1>
+
+<!--show = where we show specific info about 1 instance of class-->
+<p>Title: <%= @music_blog.title %></p>
+<p>Description: <%= @music_blog.content %></p>
+<p>RATING?? <%= @music_blog.rating %></p>
+
+<h2>CHECK IT--</h2>
+
+
+<iframe src="https://open.spotify.com/embed/user/littlelt/playlist/5Lpj6sl44YZngR5TWeaJ2O" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+<%= link_to "Return HOME <3", music_blogs_path %>

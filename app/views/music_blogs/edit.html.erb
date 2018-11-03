@@ -1,0 +1,17 @@
+#form
+<h1>MusicBlogs#edit</h1>
+<p>Find me in app/views/music_blogs/edit.html.erb</p>
+
+<%= form_for @music_blog do |f| %>
+
+  <%=label_tag(:title, 'Title')%>
+  <%= f.text_field :title %>
+
+  <%=label_tag(:content, 'Content') %>
+  <%= f.text_area :content %>
+
+  <%=label_tag(:rating, 'Rating') %>
+  <%= f.text_field :rating %>
+
+  <%= f.submit "Update" %>
+<% end %>

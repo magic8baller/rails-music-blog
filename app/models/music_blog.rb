@@ -1,0 +1,2 @@
+class MusicBlog < ApplicationRecord
+end
